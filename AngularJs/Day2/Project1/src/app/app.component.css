@@ -1,0 +1,22 @@
+#divLogin {
+  width: 600px;
+  height: 400px;
+  background-color: lightgray;
+  border: 1px solid black;
+  margin: auto;
+}
+
+#loginTable {
+  margin: auto;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1em;
+  color: white;
+}
+
+#loginTable tr {
+  padding: 10px;
+}
+
+#loginTable td {
+  text-align: right;
+}

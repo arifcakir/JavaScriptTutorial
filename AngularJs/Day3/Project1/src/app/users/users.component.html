@@ -1,0 +1,22 @@
+Name:<br>
+<input type="text" id="txtName" [(ngModel)]=Name>
+<br>
+Lastname:<br>
+<input type="text" id="txtLastname" [(ngModel)]=Lastname>
+<br>
+Age:<br>
+<input type="text" id="txtAge" [(ngModel)]=Age>
+<br>
+<input type="button" value="Add User" (click)="AddUser()">
+<br>
+<ul>
+
+<li *ngFor= "let user of Users"> 
+  
+{{user.Name}} {{user.Lastname}} {{user.Age}}
+
+</li>
+
+</ul>
+
+

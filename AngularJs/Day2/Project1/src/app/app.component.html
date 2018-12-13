@@ -1,0 +1,38 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+ <h1>{{Title}}</h1>
+<p></p>
+{{Username}} {{Password}}
+<p></p>
+
+
+  <div id="divLogin">
+ 
+<table id="loginTable">
+<tr>
+<td>Username:</td>
+<td> <input type="text" id="txtUsername"  value="{{Username}}" (keypress)="ValidateUsername($event)"> <br>{{Username}} </td>
+
+</tr>
+<tr>
+    <td>Password:</td>
+    <td><input type="password" id="txtPassword"  [value]=Password> <br> {{Password}}</td>
+  
+    </tr>
+
+    <tr>
+        <td>Mail:</td>
+        <!--email two-way binding le -->
+        <td><input type="text" id="txtEmail"   [(ngModel)]=Email> <br> {{Email}}</td>
+      
+        </tr>
+
+    <tr>
+       
+        <td colspan="2"><input type="button" id="btnSubmit" value="Submit" (click)="Login()"></td>
+        
+        </tr>
+</table>
+  </div>
+</div>
+

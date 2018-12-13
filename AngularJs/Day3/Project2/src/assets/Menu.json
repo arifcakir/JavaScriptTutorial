@@ -1,0 +1,12 @@
+{
+
+"menuName":"Main Menu",
+"isVisible":true,
+"menus":[{"menuTitle":"Homepage", "menuLink":"homapage"},
+        {"menuTitle":"Users", "menuLink":"userpage"},
+        {"menuTitle":"Login", "menuLink":""},
+        {"menuTitle":"Homepage", "menuLink":"/homapage"},
+        {"menuTitle":"Homepage", "menuLink":"/homapage"}
+]
+
+}

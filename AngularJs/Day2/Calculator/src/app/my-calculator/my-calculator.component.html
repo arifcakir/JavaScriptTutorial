@@ -1,0 +1,41 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+    <h1>
+      Welcome to {{ Title }}!
+    </h1>
+  
+  <table id="tblCalculator">
+  
+    <tr>
+  <td>Number 1:</td>
+  <td><input type="text" id="txtNumber1" [(ngModel)]=Number1>  </td>
+    </tr>
+  
+    <tr>
+        <td>Number 2:</td>
+        <td><input type="text" id="txtNumber1" [(ngModel)]=Number2>  </td>
+          </tr>
+  
+  
+          <tr>
+              <td>Result:</td>
+              <td> <label for="lblResult">{{Result}}</label> </td>
+                </tr>
+  
+  <tr>
+  <td colspan="2">
+  <input type="button" value="Sum" id="btnSum" (click)="Sum($event)">
+  <input type="button" value="Sub" id="btnSub" (click)="Sub($event)">
+  <input type="button" value="Mul" id="btnMul" (click)="Mul($event)">
+  <input type="button" value="Dev" id="btnDiv" (click)="Div($event)">
+  
+  
+  </td>
+  
+  </tr>
+  
+  </table>
+  
+   
+  
+  

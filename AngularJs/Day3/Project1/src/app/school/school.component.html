@@ -1,0 +1,48 @@
+Student Id:<br>
+<input type="num" id="txtStudentId" [(ngModel)]=Student.StudentId>
+<br>
+Exam 1:<br>
+<input type="num" id="txtExam1" [(ngModel)]=Student.Exam1>
+<br>
+Exam 2:<br>
+<input type="num" id="txtExam2" [(ngModel)]=Student.Exam2>
+<br>
+<input type="button" value="Add User" (click)="AddStudent()">
+<br>
+
+<div>
+<input type="radio" name="colors" (click)="color='green'">Green <br>
+<input type="radio" name="colors" (click)="color='yellow'">Yellow <br>
+<input type="radio" name="colors" (click)="color='red'">Red<br>
+
+
+<p [appHighlight]="color">Highlight me!</p>
+
+<p [appHighlight]="color" defaultColor="violet">
+  Highlight me too!
+</p>
+
+<hr>
+
+
+<p [appHighlight]="'yellow'">Highlighted in yellow</p>
+<p appHighlight="orange">Highlighted in orange</p>
+
+
+</div>
+
+
+
+
+
+<ul>
+
+<li *ngFor= "let student of Students"> 
+  
+{{student.StudentId}} {{student.Exam1}}  {{student.Exam2}} {{(student.Exam1 + student.Exam2)/2}}
+
+</li>
+
+</ul>
+
+
