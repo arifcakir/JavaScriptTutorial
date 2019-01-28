@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testWebSocket", "testWebSocket\testWebSocket.csproj", "{88476423-1CBA-4ADB-AB02-063ABAEFE203}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicrosoftSignalRProject", "MicrosoftSignalRProject\MicrosoftSignalRProject.csproj", "{50624491-5F84-43A5-931C-79D4D8FFD34B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{88476423-1CBA-4ADB-AB02-063ABAEFE203}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88476423-1CBA-4ADB-AB02-063ABAEFE203}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88476423-1CBA-4ADB-AB02-063ABAEFE203}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88476423-1CBA-4ADB-AB02-063ABAEFE203}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50624491-5F84-43A5-931C-79D4D8FFD34B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50624491-5F84-43A5-931C-79D4D8FFD34B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50624491-5F84-43A5-931C-79D4D8FFD34B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50624491-5F84-43A5-931C-79D4D8FFD34B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4228E0C4-297F-4175-ACC3-BE414F1F65B0}
+	EndGlobalSection
+EndGlobal

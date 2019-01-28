@@ -1,0 +1,8 @@
+packages
+bin
+node_modules
+obj
+
+*.dll
+**/**.dll
+*.lock

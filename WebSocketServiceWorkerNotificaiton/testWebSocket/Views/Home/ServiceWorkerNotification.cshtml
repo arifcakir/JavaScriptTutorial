@@ -1,0 +1,37 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ServiceWorkerNotification</title>
+</head>
+<body>
+    <div>
+
+        <input type="button" value="ekle" id="pushButton" onclick="sendmessage()" />
+
+        
+        <br/>
+        
+        JSON
+        <div class="js-subscription-json"></div>
+        
+        <br/>
+        
+        detail
+
+        <div class="js-subscription-details"></div>
+
+        
+
+    </div>
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/ServiceWorkerNotification.js"></script>
+
+</body>
+</html>
