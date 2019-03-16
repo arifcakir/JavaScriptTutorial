@@ -1,0 +1,72 @@
+<html>
+<head>
+<script>
+
+
+//aşağıdaki fonksiyonların hepsi aynı işi yapar
+
+
+function test1(fullname){
+return "merhaba" + fullname;
+}
+
+
+var test2=(fullname)=>{
+return "merhaba" + fullname;
+}
+
+var test3=(fullname)=>  "merhaba" + fullname;
+
+
+alert(test3("murat"));
+
+
+//iç içe fonksiyon
+
+function test4(mynumber){
+
+        function carp(mynumber2)
+        {
+
+                    return mynumber * mynumber2;
+
+        }
+
+        return carp;
+
+
+}
+
+
+alert(test4(3)(4))
+
+
+
+
+
+
+
+</script>
+
+
+
+
+</head>
+
+<body>
+
+<div id="txtText"></div>
+
+
+<script>
+
+
+
+
+
+</script>
+
+
+</body>
+
+</html>

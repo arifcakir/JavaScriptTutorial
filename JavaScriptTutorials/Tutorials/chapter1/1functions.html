@@ -1,0 +1,58 @@
+<html>
+<head>
+<script>
+//fonksiyon tanımlamanın farklı çeşitleri vardır.
+//alttaki 3 şekilde fonksion tanımlanabilir.
+function message1(){
+    alert("merhaba ");
+}
+
+var message2= function(){
+    alert("merhaba 2");
+}
+
+var message3=()=>{
+    alert("merhaba 3")
+}
+
+
+//aşağıdaki şekillerde fonksiyon çağrılabilir
+
+this["message1"]();
+
+message2();
+
+this.message3();
+
+
+</script>
+
+
+
+
+</head>
+
+<body>
+
+<div id="txtFunction"></div>
+
+
+<script>
+
+
+//yazılmış br fonksiyonun adı eğer bir text e ya da html ye verilirse ozaman fonksiyonu string gibi yazar
+// bu alanın body tag ı içinde yazılma sebebi: document ready yazılmadığı için div tagı yüklenmeden kodların çelışmasını önlemek
+
+var myFunc=()=>{alert("sdfd")};
+
+var txtFunction = document.getElementById("txtFunction");
+
+txtFunction.innerText=myFunc;
+
+
+</script>
+
+
+</body>
+
+</html>

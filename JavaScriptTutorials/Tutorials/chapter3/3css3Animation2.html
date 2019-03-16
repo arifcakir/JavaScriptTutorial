@@ -1,0 +1,89 @@
+<html>
+<head>
+<style>
+
+
+.myPolygon {
+
+fill:#ED1C24;
+transition: all 2s;
+
+}
+
+.myPolygon:hover {
+
+fill:chocolate;
+
+}
+
+
+
+.myDiv{
+
+width: 200px;
+height: 200px;
+transition: all 3s;
+background-color: chocolate;
+
+}
+
+.myDiv:hover{
+
+background-color: darkgrey;
+
+
+}
+
+
+    
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<!--https://www.youtube.com/watch?v=IM8eTD01UE8-->
+
+
+    <svg id="mySVG" width="350px" height="500px"  style="overflow: hidden">
+        <polygon id="myPolygon" class="myPolygon"
+      fill = "#FF931E"
+      stroke = "#ED1C24"
+      stroke-width = "5"
+      points = "279.1,160.8 195.2,193.3 174.4,280.8   117.6,211.1 27.9,218.3 76.7,142.7 42.1,59.6 129.1,82.7 197.4,24.1 202.3,114 ">
+
+<animate attributeType="CSS" attributeName="width"
+
+from="200" to="100" begin="click"></animate>
+
+
+        </polygon>
+
+
+
+
+<rect x="200" y="200" width="200" height="200" fill="#ED1C24">
+
+
+            <animate attributeType="CSS" attributeName="opacity" 
+            from="1" to="0" dur="5s" repeatCount="indefinite" begin="click"/>
+
+</rect>
+
+      </svg>
+
+
+
+      <div id="myDiv" class="myDiv">
+
+
+
+      </div>
+
+
+</body>
+
+</html>

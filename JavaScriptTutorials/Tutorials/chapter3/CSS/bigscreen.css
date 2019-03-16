@@ -1,0 +1,31 @@
+.container{
+    box-sizing: border-box;
+    margin:0 auto;
+    height: 100%;
+    max-width: var(--screen-size-bigsize);
+    vertical-align: top;
+    background-color: burlywood
+    }
+
+
+    #title::after{
+
+content: var(--screen-size-bigsize);
+
+    }
+
+
+.mygrid-item-container-1col{ grid-template-columns: auto;  }
+.mygrid-item-container-2col{ grid-template-columns: auto auto;  }
+.mygrid-item-container-3col{ grid-template-columns: auto auto auto;  }
+.mygrid-item-container-4col{ grid-template-columns: auto auto auto auto;  }
+.mygrid-item-container-5col{ grid-template-columns: auto auto auto auto auto;  }
+.mygrid-item-container-6col{ grid-template-columns: auto auto auto auto auto auto ;  }
+.mygrid-item-container-7col{ grid-template-columns: auto auto auto auto auto auto auto;  }
+.mygrid-item-container-8col{ grid-template-columns: auto auto auto auto auto auto auto auto ;  }
+.mygrid-item-container-9col{ grid-template-columns: auto auto auto auto auto auto auto auto auto ;  }
+.mygrid-item-container-10col{ grid-template-columns: auto auto auto auto auto auto auto auto auto auto;  }
+.mygrid-item-container-11col{ grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto;  }
+.mygrid-item-container-12col{ grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;  }
+
+

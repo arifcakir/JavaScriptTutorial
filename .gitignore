@@ -1,0 +1,6 @@
+ 
+bin
+obj
+*.dll
+.vs
+node_modules

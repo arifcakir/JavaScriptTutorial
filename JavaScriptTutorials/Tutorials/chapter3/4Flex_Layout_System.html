@@ -1,0 +1,103 @@
+<html>
+<head>
+<style>
+:root {
+    --primaryColor: coral; 
+}
+
+/* flexbox örneği*/
+
+.flex-container{
+display: flex;
+background-color: var(--primaryColor);
+padding: 5px;
+
+margin: auto;
+
+width: 50%;
+
+flex-wrap: wrap;
+
+}
+
+
+.flex-container div{
+background-color: azure;
+margin: 5px;
+font-size: 20px;
+padding: 10px;
+width: 75px;
+
+
+}
+
+
+.list-container div{
+
+margin: 5px;
+background-color: var(--primaryColor);
+
+display: list-item;
+
+
+}
+
+
+
+
+
+    
+</style>
+
+
+
+</head>
+
+<body>
+
+<div class="flex-container">
+
+<div>1</div>
+<div>2</div>
+<div>3</div>
+<div>4</div>
+<div>5</div>
+
+<div>6</div>
+<div>7</div>
+<div>8</div>
+
+
+
+</div>
+
+
+<ul class="list-container">
+
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    
+    
+    
+</ul>
+
+<!--box-sizing-->
+<div style="width: 100px; height: 100px; background-color: teal;"></div>
+
+<div style="background-color: yellow; width: 100px; height: 100px; padding: 20px; border: 3px solid black; margin-top: 20px;">box-sizing yok</div>
+
+<div style="background-color: red; width: 100px; height: 100px; padding: 20px; border: 3px solid black; margin-top: 20px; box-sizing: border-box;">box-sizing var</div>
+<!--boxsizing biriş-->
+
+
+
+</body>
+
+</html>

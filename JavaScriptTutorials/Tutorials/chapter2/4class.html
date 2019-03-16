@@ -1,0 +1,119 @@
+<html>
+<head>
+<script>
+//alttaki birinci nesne ecmascript 5 
+//ikincisi ise ecmascirpt 6 ile yazılmış
+
+var Person = function(ad,yas,kilo){
+this.ad=ad;
+this.yas = yas;
+this.kilo = kilo;
+
+
+//burası daha sonra bu nesne extend (prototype ile) eklenebilirdi.
+
+this.getName=()=>{
+        return this.ad;
+        }
+}
+
+
+
+var myPerson = new Person("murat",40,90);
+
+
+alert(myPerson.getName());
+
+//====================================================== es 6
+
+class Person2{
+
+    constructor(ad,yas,kilo)
+    {
+    this.ad=ad;
+    this.yas=yas;
+    this.kilo=kilo;
+    }
+
+    getName(){
+        return this.ad;
+    }
+
+
+
+    setName(ad){
+        this.ad = ad;
+    }
+
+
+    //aynı c# daki gibi get set methodları davardır.
+
+    get Yas(){return this.yas;};
+    set Yas(par){this.yas=par;};
+
+
+}
+
+var myPerson2 = new Person2("merhaba",30,60);
+
+
+alert(myPerson2.getName());
+
+alert(myPerson2.ad);
+
+
+//ayrıca inheritance ve static de geldi da geldi
+
+class engineer extends Person2 {
+        constructor(ad,yas,kilo,lang){
+                    super(ad,yas,lang);
+                    this.lang = lang;
+        }
+
+        get Lang(){return this.lang};
+        set Lang(par){this.lang=lang};
+
+
+
+        //buradaki statik c# dakine biraz benziyor. engineer class ını newlemeden kullanabiliriz.
+        static  message(){return "merhaba nasılsın"}
+
+
+}
+
+
+alert(engineer.message());
+
+
+var Engineer = new engineer("merhaba",30,45,"eng");
+
+alert(Engineer.lang);
+
+
+
+
+</script>
+
+
+
+
+</head>
+
+<body>
+
+<div id="txtText"></div>
+
+
+<script>
+
+
+
+
+
+</script>
+
+
+</body>
+
+</html>
+

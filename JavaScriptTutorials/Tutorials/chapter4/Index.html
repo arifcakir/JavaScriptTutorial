@@ -1,0 +1,97 @@
+<html>
+<head>
+<title>MVC Test | Anasayfa</title>
+<link rel="stylesheet" type="text/css" href="Assets/Styles/App.css" />
+<script src="Scripts/App.js"></script>
+
+
+
+
+</head>
+
+<body>
+
+
+<table class="tblform">
+<tr>
+
+<td>Id:</td>
+<td> <input type="number" id="StudentId"> </td>
+</tr>
+
+<tr>
+
+    <td> Fullname:</td>
+    <td><input type="number" id="FullName"></td>
+    </tr>
+
+    <tr>
+
+        <td colspan="2"> <button id="btnSave">Save</button> </td>
+       
+        </tr>
+
+</table>
+
+
+<hr>
+
+<table class="tblform" data-list="StudentListModel">
+<thead>
+<th>ID</th>
+
+<th>Fullname</th>
+
+
+</thead>
+
+    <tr>
+    
+    <td>{{StudentId}}</td>
+    <td>{{FullName}}</td>
+    </tr>
+        
+    </table>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+    https://www.awwwards.com/build-a-simple-javascript-app-the-mvc-way.html <br>
+
+    https://github.com/jyomohi/Javascript-MVC-App <br>
+
+    https://medium.com/@ToddZebert/a-walk-through-of-a-simple-javascript-mvc-implementation-c188a69138dc   <br>
+
+
+    https://stackoverflow.com/questions/8497833/hello-world-in-mvc-pattern  ----- çok özet anlatım <br>
+
+
+    https://stackoverflow.com/questions/45445504/simple-plain-javascript-mvc <br>
+
+
+    https://gist.github.com/darrenderidder/3325582 ---adım adım ilerlemiş <br>
+
+
+    https://alexatnet.com/model-view-controller-mvc-in-javascript/ --- çok anlaşılır <br>
+
+-->
+
+    <script src="Scripts/Models/Student/Student.js"></script>
+    <script src="Scripts/Models/Student/StudentListModel.js"></script>
+    <script src="Scripts/Views/Student/StudentListView.js"></script>
+    <script src="Scripts/Controllers/StudentController.js"></script>
+    
+</body>
+
+<script src="Scripts/App.css"></script>
+</html>

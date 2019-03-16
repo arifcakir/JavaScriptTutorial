@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1">
+<style>
+
+body{font-size: 1em;}
+
+div[id^="box"]{
+width: 30px;
+height: 30px;
+border: 1px solid black;
+}
+
+
+
+/* Transition: Bu herhangi bir tag in herhnagi bir özelliğinin zamana bağlı değişmesini ifade eder.
+mavi kutuyla transition testi yapacağız
+*/
+
+.colorBlue{
+background-color: blue;
+overflow: hidden;
+transition-property: width,Height,background-color;;
+transition-duration: 2s;
+transition-delay: 1s;
+transition-timing-function: ease-in;
+/*cubic-bezier için ise http://cubic-bezier.com  adresine bakılabilir*/
+}
+
+.colorBlue>p{
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-size: 0.5em;
+transition-property: font-size, color, font-weight;
+transition-duration: 2s;
+transition-delay: 1s;
+transition-timing-function: ease-in;
+}
+
+.boxBlue:hover{
+width: 100px;
+height: 100px;
+background-color: aqua;
+}
+
+.boxBlue>p:hover{
+font-size: 1em;
+color: brown;
+font-weight: bold;
+}
+
+
+
+
+
+/* Transform 2d ve 3d: Bu herhangi bir tag in büyüyüp küçülmesi, dönmesi, .. vb shape, size, psition .
+kırmızı kutuyla transform
+*/
+
+.colorRed{
+background-color: red;
+transition: all 3s;
+
+}
+
+.colorRed>p{
+color: white;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-size: 0.5em;
+
+}
+
+.colorRed:hover{
+/*transform:rotate(45deg);*/
+
+/*matrix(scaleX(),skewY(),skewX(),scaleY(),translateX(),translateY())*/
+transform: matrix(2,0.3,0.3,2,10,10);
+transform-origin: left top;
+}
+
+
+
+
+
+
+
+/*burada transform 3d testi yapılıyor*/
+
+#mainBox{
+position: absolute;
+margin-left: 300px;
+margin-right: 300px;
+
+
+/*kendi içindeki elementleri z ye göre terten dizer. yani küçük sayı daha arkada yer alır.*/
+transform-style: preserve-3d;
+
+
+transition: all 5s;
+
+
+
+
+}
+
+#mainBox > #mb1{
+transform:translateZ(0px)
+}
+
+#mainBox > #mb2{
+transform:translateZ(-100px)
+}
+
+#mainBox > #mb3{
+transform:translateZ(-200px);
+
+}
+
+#mainBox:hover{
+
+
+
+/*xyz düzlemi şu şekilde ekrand: x yukarıdan aşağı, y soldan sağa, z arkadan öne
+perspektif ise hakikaten arkadakini daha ufak öndekini daha bütük yapmaya yarıyor.
+*/
+transform: rotateX(-20deg) rotateY(-40deg) perspective(300px);
+
+}
+
+#mainBox:hover > #mb3 {
+background-color: darkorange;
+} 
+
+
+
+
+/* animation: bu ise transition ve transform uda kullanarak daha karmaşık animasyonları yapmamızı sağlar. keyframe vs kullanılabilir .
+burada tüm kutular kullanılabilir.
+*/
+.colorYellow{
+background-color: rgb(79, 201, 31);
+position: fixed;
+animation-name: animasyonum;
+animation-duration: 10s;
+animation-iteration-count: 2;
+animation-direction: reverse;
+}
+
+
+
+@keyframes animasyonum{
+/*
+from {background-color: green;}
+to {background-color: red;}
+*/
+
+0% {background-color: green; left:0px; top:0px;}
+20% {background-color: brown; left: 200px; top: 200px;}
+40% {background-color: chartreuse; left: 400px; top:500px;}
+60% {background-color: khaki;}
+80% {background-color: green; left: 100px; top: 300px;}
+100% {background-color: red; }
+
+
+
+
+
+}
+
+
+
+
+
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div id="box1" class="colorRed">
+<p>merhaba nasilsin</p>
+
+</div>
+
+
+<div id="box2" class="colorBlue boxBlue">
+<p>merhaba nasilsin</p>
+
+    
+    </div>
+
+    <div id="box3" class="colorYellow">
+
+        
+        </div>
+    
+
+
+<div id="mainBox">
+<div id="mb1" style="background-color: yellow; width:100px; height: 100px; position: absolute;"></div>
+<div id="mb2"  style="background-color: aqua; width:100px; height: 100px; position: absolute;"></div>
+<div id="mb3"  style="background-color: darkmagenta; width:100px; height: 100px; position: absolute;"></div>
+</div>
+
+
+
+
+
+</body>
+
+</html>

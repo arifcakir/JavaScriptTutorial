@@ -1,0 +1,126 @@
+<html>
+<head>
+<script>
+
+function* gen(){
+
+yield console.log("merhaba 1");
+yield console.log("merhaba 3");
+yield console.log("merhaba 4");
+return console.log("merhaba 2");
+
+}
+
+
+var newgen = gen();
+console.log(newgen.next());
+console.log(newgen.next());
+console.log(newgen.next());
+console.log(newgen.next());
+// eğer newgen.next() i console a yazdırırsak 2 parametre ile çalıştığını göreceğiz.
+//birinci parametre value ikincisi done, fonksiyonun tüm adımları next ile bitene kadar done false döner.
+
+
+console.log("-------------------------------------------");
+
+function* gen2(){
+
+yield "merhaba 1";
+yield "merhaba 3";
+yield "merhaba 4";
+return "merhaba 2";
+
+}
+
+
+var newgen2 = gen2();
+console.log(newgen2.next());
+console.log(newgen2.next());
+console.log(newgen2.next());
+console.log(newgen2.next());
+
+
+
+console.log("-------------------------------------------");
+
+function* gen3(){
+
+var x=  yield  "merhaba 1";
+var y=  yield "merhaba 3";
+var z=  yield "merhaba 4";
+return x * y* z;
+
+}
+
+
+var newgen3 = gen3();
+console.log(newgen3.next());
+console.log(newgen3.next(20));
+console.log(newgen3.next(5));
+console.log(newgen3.next(7));
+
+
+console.log("-------------------------------------------");
+
+function* gen4(){
+
+var x=  yield  "merhaba 1";
+var y=  yield "merhaba 3";
+var z=  yield "merhaba 4";
+return x * y* z;
+
+}
+
+
+var newgen4 = gen4();
+
+var item=newgen4.next();
+console.log("value : " + item.value + " Done :" + item.done);
+item=newgen4.next(20);
+console.log("value : " + item.value + " Done :" + item.done);
+item=newgen4.next(5);
+console.log("value : " + item.value + " Done :" + item.done);
+item=newgen4.next(7);
+console.log("value : " + item.value + " Done :" + item.done);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+</head>
+
+<body>
+
+<div id="txtText"></div>
+
+
+<script>
+
+
+
+
+
+</script>
+
+
+</body>
+
+</html>

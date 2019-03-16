@@ -1,0 +1,142 @@
+:root{
+--color-background-1: #12817c;
+--color-background-2:#964956;
+--color-background-3:#3e6188;
+--color-background-4:#9c9ea0;
+
+
+--color-warning:#899707;
+--color-info:#1f6fbb;
+--color-danger:#a7481c;
+--color-success:#479644;
+
+
+--border-color-1:#dddddd;
+--border-color-1:#7e5050;
+--border-color-1:#3c6c99;
+--border-color-1:#268f63;
+
+
+--screen-size-mobile:100%;
+--screen-size-tablet:800px;
+--screen--size-desktop:1000px;
+--screen-size-bigsize:1200px;
+
+}
+html, body{
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+color: rgb(43, 40, 40);
+box-sizing: border-box;
+margin: 0px;
+padding: 0px;
+height: 100%;
+width: 100%;
+background-color: lightblue;
+}
+
+
+.padding-1{padding:1px;}
+.padding-2{padding:2px;}
+.padding-3{padding:3px;}
+.padding-4{padding:4px;}
+.padding-5{padding:5px;}
+.padding-6{padding:6px;}
+.padding-7{padding:7px;}
+.padding-8{padding:8px;}
+.padding-9{padding:9px;}
+.padding-10{padding:10px;}
+.padding-15{padding:15px;}
+
+
+
+
+.container{
+  box-sizing: border-box;
+  margin:0 auto;
+  height: 100%;
+  max-width: var(--screen-size-mobile);
+  vertical-align: top;
+background-color: darkcyan;
+
+  }
+
+  #title::after{
+
+      content: var(--screen-size-mobile);
+      
+          }
+
+
+.grid-container{
+box-sizing: border-box;
+display: grid;
+grid-template-columns: auto auto;
+padding: 5px;
+grid-gap: 5px;
+background-color: darkgrey;
+}
+
+.grid-item{background-color: darksalmon;}
+
+
+
+
+
+
+
+/*           area container başla            */
+
+.grid-item-area-header { grid-area: header; }
+.grid-item-area-menu { grid-area: menu; }
+.grid-item-area-main { grid-area: main; }
+.grid-item-area-right { grid-area: right; }
+.grid-item-area-footer { grid-area: footer; }
+
+.grid-item-area-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main right right'
+    'menu footer footer footer footer footer';
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-item-area-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+  }
+
+
+
+/*           area container bitir            */
+
+
+
+
+/*.....................grid ile benim çözüm........................*/
+
+
+.mygrid-item-container{
+    box-sizing: border-box;
+    display: grid;
+    padding: 5px;
+    grid-gap: 5px;
+    background-color:grey;
+}
+
+
+
+
+
+
+
+
+.mygrid-item{
+
+background-color: #a7481c;
+
+}

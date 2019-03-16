@@ -1,0 +1,106 @@
+<html>
+<head>
+<script>
+
+
+var carObject = {
+        driver:"murat cabuk",
+        color:"black",
+        speed:200,
+        drive:()=>{console.log("araba hareket etti");},
+        stop:()=>{console.log("araba durdu");}
+};
+
+
+//JavaScript Objects are Mutable
+//Objects are mutable: They are addressed by reference, not by value.
+
+// yani alttaki tanımlamada myCar tamamen carObject aynısıdr. kopyesi değildir yani. aynı adrese işaret ederler.
+// driver ikisinde de mursel cabuk görünür.
+// yani class şle karıştırılmamalıdır.ç
+
+
+
+var myCar=carObject;
+
+
+myCar.driver="mursel cabuk";
+
+
+//properti silmek için
+
+delete myCar.color;
+
+
+//===================================== class version ===============================
+
+
+//bildiğimiz class gibi nasımlamak şstersek ozaman function kullanmalıyız
+//constructor lu versiyon
+
+function person(name, nationality, age){
+this.name=name,
+this.nationality=nationality,
+this.age=age,
+this.allinone = ()=>{return this.name + " " + this.nationality + " " + this.age}
+}
+
+
+var student = new person("murat","turkish",40);
+var worker = new person("john","american",25)
+
+
+
+
+
+alert(student.allinone());
+
+alert(worker.allinone());
+
+
+
+
+
+</script>
+
+
+
+
+</head>
+
+<body>
+
+<div id="carObjectDiv"></div>
+
+<br>
+
+-----------------------------------------
+
+
+<div id="myCarDiv"></div>
+
+
+<script>
+
+var carObjectDiv = document.getElementById("carObjectDiv");
+var myCarDiv = document.getElementById("myCarDiv");
+
+carObjectDiv.innerText = "driver=" + carObject.driver + " ---- " + "color=" + carObject.color + " ---- "  + "speed=" + carObject.speed; 
+carObject.drive(); carObject.stop();
+
+myCarDiv.innerText = "driver=" + myCar.driver + " ---- " + "color=" + myCar.color + " ---- "  + "speed=" + myCar.speed; 
+myCar.drive(); myCar.stop();
+
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+
+</html>
