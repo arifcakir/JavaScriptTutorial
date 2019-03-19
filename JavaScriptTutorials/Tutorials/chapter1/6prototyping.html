@@ -1,0 +1,64 @@
+<html>
+<head>
+
+<script>
+
+//prototype daha önce oluşturulmuş nesneleri extend etmemizi sağlar.
+// 
+
+
+window.onload = function(){
+
+function person(name, nationality, age){
+    this.name=name,
+    this.nationality=nationality,
+    this.age=age,
+    this.allinone = ()=>{return this.name + " " + this.nationality + " " + this.age}
+}
+
+person.prototype.id = "sddfsdfsd";
+
+
+
+
+var student = new person(name="murat",nationality="turkish",age=40);
+student.id = "232232323";
+
+person.prototype.allinone2 = function (){
+
+    return this.name + " " + this.nationality + " " + this.age + " " + this.id
+}
+
+
+
+alert(student.allinone2());
+
+
+
+
+};
+
+</script>
+
+
+
+
+</head>
+
+<body>
+
+<div id="txtText"></div>
+
+
+<script>
+
+
+
+
+
+</script>
+
+
+</body>
+
+</html>

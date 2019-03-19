@@ -1,0 +1,102 @@
+<!DOCTYPE html> 
+<html>
+<head>
+
+    <meta charset="UTF-8">
+
+    <!--
+Media Types:
+all:    Used for all media type devices
+print:  Used for printers
+screen: Used for computer screens, tablets, smart-phones etc.
+speech: Used for screenreaders that "reads" the page out loud
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="CSS/common.css">
+    <link rel="stylesheet" media="screen and (min-width: 400px)" href="CSS/mobile.css">
+    <link rel="stylesheet" media="screen and (min-width: 800px)" href="CSS/tablet.css">
+    <link rel="stylesheet" media="screen and (min-width:1000px)" href="CSS/desktop.css">
+    <link rel="stylesheet" media="screen and (min-width: 1200px)" href="CSS/bigscreen.css">
+
+    <link rel="stylesheet"  media="screen print" href="CSS/print.css">
+
+
+
+    <!-- viewport size : vw, vh, vmin, vmax
+         size türleri. sayfa büyüyüp küçüldükçe birşeylerin size ıda değişsin isityorsak-->
+
+
+
+</head>
+
+<body>
+
+<div class="container padding-10">
+
+    <div class="grid-container">
+    
+    <div class="grid-item">test sol</div>
+    <div class="grid-item">test sağ</div>
+    <div class="grid-item">test sol</div>
+    <div class="grid-item">test sağ</div>
+    <div class="grid-item">test sol</div>
+    <div class="grid-item">test sağ</div>
+    <div class="grid-item">test sol</div>
+    <div class="grid-item">test sağ</div>
+    <div class="grid-item">test sol</div>
+    <div class="grid-item">test sağ</div>
+    
+    
+    </div>
+
+<br> <br> <br>
+
+
+<p>This grid layout contains six columns and three rows:</p>
+
+<div class="grid-item-area-container">
+  <div class="grid-item-area-header">Header</div>
+  <div class="grid-item-area-menu">Menu</div>
+  <div class="grid-item-area-main">Main</div>  
+  <div class="grid-item-area-right">Right</div>
+  <div class="grid-item-area-footer">Footer</div>
+</div>
+
+
+<br> <br> <br>
+kendi grid denemelerim
+
+
+<div class="mygrid-item-container mygrid-item-container-4col mygrid-item-container-d-3col mygrid-item-container-t-2col mygrid-item-container-m-1col">
+
+<div class="mygrid-item">merhaba 11 <p id="title"></p></div>
+<div class="mygrid-item">merhaba 12</div>
+
+<div class="mygrid-item">merhaba 13</div>
+<div class="mygrid-item">merhaba 21</div>
+<div class="mygrid-item">merhaba 22</div>
+
+<div class="mygrid-item">merhaba 23</div>
+
+<div class="mygrid-item">merhaba 31</div>
+
+<div class="mygrid-item">merhaba 32</div>
+
+
+</div>
+
+
+
+<div style="height: 100px"></div>
+
+
+
+
+</div>
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,79 @@
+<html>
+<head>
+<script>
+
+(function(){
+
+alert("merhaba");
+
+
+})
+
+();
+
+var myError = {
+
+message:"sdfg fg dfgdf"
+
+}
+
+window.onload = function(){
+    try {
+
+       // test("test");
+
+        //ve throw fonksiyonu ile kendimiz hata patlatabiliriz
+        // throw("fdgfdg");
+
+
+        throw(myError)
+        
+        } catch (error) {
+
+            var txtText = document.getElementById("txtText");
+
+            //tip donüştürmeye gerek kalmadan myError objesinin message property si çağrılabilir.
+            txtText.innerText = error.message;
+    
+        }
+        finally
+        {
+//try catch bittikten sonra burası çalışır.
+
+alert("try catch bitti");
+
+        }
+
+
+    }
+
+
+//eğer hata ayıklamada console kullanmayı istiyorsak 
+// console.table(data, ["sütun1","sütun2",...])  iyi bir çözüm labilir.
+
+
+
+</script>
+
+
+
+
+</head>
+
+<body>
+
+<div id="txtText"></div>
+
+
+<script>
+
+
+
+
+
+</script>
+
+
+</body>
+
+</html>

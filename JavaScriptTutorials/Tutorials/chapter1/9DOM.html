@@ -1,0 +1,111 @@
+<html>
+
+<head>
+    <script>
+
+
+function onClickP(id)
+{
+
+    alert( "seçildi:" + id);
+
+    secildi = id;
+
+}
+
+
+
+var secildi="";
+
+
+        function bul(id) {
+            return document.getElementById(id);
+        }
+
+
+        function getRandomArbitrary(min, max) {
+                         return Math.round(Math.random() * (max - min) + min)   ;
+                            }
+
+        function ekle() {
+
+            alert("ekle");
+
+            var element = document.createElement("p");
+
+            element.id="p" + getRandomArbitrary(0, 1000) 
+
+
+            element.innerText = "id:" + element.id + " ----------- " + Math.random();
+            
+                       
+
+            bul("txtText").appendChild(element);
+
+            //konuyla ilgili olarak buraya bakabilirsin
+            //https://stackoverflow.com/questions/10000083/javascript-event-handler-with-parameters
+
+
+            bul(element.id).addEventListener("click", function(){
+
+                onClickP(element.id)
+
+            })
+            
+            
+            
+
+        }
+
+        function sil() {
+
+            alert("sil");
+
+            var element = bul(secildi);
+
+           element.parentElement.removeChild(element);
+
+           
+        }
+
+        function degistir() {
+
+           
+            alert("değiştir");
+
+            var element = document.createElement("p");
+
+            element.id="p" + getRandomArbitrary(0, 1000) 
+
+
+            element.innerText = "id:" + element.id + " ----------- " + Math.random();
+
+            bul(secildi).innerHTML = element.innerHTML;
+
+
+
+        }
+
+    </script>
+
+
+</head>
+
+<body>
+
+    <div id="txtText"></div>
+
+
+    <input type="button" value="ekle" onclick="ekle()">
+    <input type="button" value="sil" onclick="sil()">
+    <input type="button" value="degistir" onclick="degistir()">
+
+
+    <script>
+
+    </script>
+
+
+</body>
+
+</html>

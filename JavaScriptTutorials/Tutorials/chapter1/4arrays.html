@@ -1,0 +1,57 @@
+<html>
+<head>
+<script>
+
+//array method ları ile ilgili olarak
+//https://www.w3schools.com/js/js_array_methods.asp
+
+//burada sadece custom sıralama iel ilgili örnek verilecek
+
+
+
+
+</script>
+
+
+
+
+</head>
+
+<body>
+
+<div id="txtText"></div>
+<br><br>
+
+<div id="txtText2"></div>
+
+
+<script>
+
+var myArray = [2,3,4,1,8,1,2,4,5,6,7,8,9,10];
+
+var txtText = document.getElementById("txtText");
+
+var txtText2=document.getElementById("txtText2");
+
+txtText.innerText = myArray.sort();
+
+txtText2.innerText = myArray.sort(function(x,y){
+
+
+return x-y;
+
+//test den sıralama apmak isityorsak. y-x diyeecğiz
+
+});
+
+
+
+
+
+
+</script>
+
+
+</body>
+
+</html>

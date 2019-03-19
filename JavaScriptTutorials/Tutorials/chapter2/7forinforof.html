@@ -1,0 +1,68 @@
+<html>
+<head>
+<script>
+
+
+window.onload=()=>{
+
+var website = {name:"diyanet", adress:"diyanet.gov.tr",year :2017}
+
+//for in
+for (const key in website) {
+    
+       document.getElementById("txtText").innerText +=website[key] + "<br>";    
+}
+
+
+
+
+
+//for of , aynı for each gibi fakat javascriptte birde foreach var ama biraz farklı
+//for of ve foreach için iterable objeler lazım. bunlar array, set ve map dir
+// konu ile ilgili : https://medium.com/@abustamam/for-loops-vs-foreach-in-javascript-7a977278a39es
+
+let mywebsites =['test','2','dsfsd']
+
+for (const key of mywebsites) {
+    
+    document.getElementById("txtText").innerHTML +=key + "<br>";    
+}
+
+
+//for of , aynı for each gibi fakat javascriptte birde foreach var ama biraz farklı
+
+let mywebsites2 = ['test','2','dsfsd']
+
+mywebsites2.forEach(element => {
+
+    document.getElementById("txtText").innerHTML +=element + "<br>";  
+
+    
+});
+
+console.log(mywebsites2);
+
+
+
+}
+
+
+
+
+</script>
+
+</head>
+
+<body>
+
+<div id="txtText"></div>
+
+
+<script>
+
+</script>
+
+
+</body>
+
+</html>

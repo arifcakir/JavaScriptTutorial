@@ -1,0 +1,83 @@
+<html>
+<head>
+<script>
+
+/*
+
+Event propagation is a way of defining the element order when an event occurs. If you have a <p> element inside a <div> element, 
+    and the user clicks on the <p> element, which element's "click" event should be handled first?
+
+In bubbling the inner most element's event is handled first and then the outer: the <p> element's click event is handled first, 
+    then the <div> element's click event.
+
+In capturing the outer most element's event is handled first and then the inner: the <div> element's click event will be handled first, 
+    then the <p> element's click event.
+
+addEventListener(event, function, useCapture);
+
+
+ayrıca kendi event imizi de yazabiliriz.
+
+var event = new Event('build');
+
+// Listen for the event.
+elem.addEventListener('build', function (e) { ... }, false);
+
+// Dispatch the event.
+elem.dispatchEvent(event);
+
+
+
+*/
+
+
+</script>
+
+
+
+
+</head>
+
+<body>
+
+<div id="txtText"></div>
+
+<input type="button" value="yazı yaz" id="btn1" onclick="onClick()"> <br>
+
+
+<input type="button" value="yazı yaz 2" id="btn2">
+
+<div id="fgfgf"></div>
+
+
+<script>
+
+// event tanımlamanın iki yolu var
+// 1.si : direkt DOM üzerinde ilgili tag in  n ilgili event ine attribute olarka fonksion eklemek
+// 2.si script tag lari arasnda ilgili DOM objesini yakalayıp ilgili event eventlistener olarak keydetmek.
+var i=0;
+
+function onClick (){
+i=i+1;
+var txtText = document.getElementById("txtText").innerText="merhaba nasılsın " + i.toString();
+}
+
+
+
+//burada eventlistener kullanıldı. iki butonda click yapıldırğında ay nı fonksiyonu çağırıyor.
+var btn2 = document.getElementById("btn2");
+btn2.addEventListener("click", onClick);
+//şu şekilde de yapılabilir
+//btn2.onclick = onClick;
+
+
+
+
+
+
+</script>
+
+
+</body>
+
+</html>
