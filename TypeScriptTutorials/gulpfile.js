@@ -10,25 +10,25 @@ var inject = require('gulp-inject');
 
 //farklı ts  moduller için bundan biekaçtane hazırlanabilir
 function ts(done) {
-    
+
     tsProject.src()
         .pipe(tsProject())
         .js.pipe(gulp.dest("dist/Scripts"));
 
     done();
 }
-exports.ts=ts;
+exports.ts = ts;
 
 
-function less(done) {
-    
+function lessCSS(done) {
+
     gulp.src(["src/Styles/**/*.less"]).
         pipe(less()).
         //pipe(minifyCSS({})).
         pipe(gulp.dest("dist/Styles"));
     done();
 }
-exports.less=less;
+exports.lessCSS = lessCSS;
 
 
 function bootstrap(done) {
@@ -37,7 +37,7 @@ function bootstrap(done) {
         pipe(gulp.dest("dist/ExtLib/bootstrap"));
     done();
 }
-exports.bootstrap=bootstrap;
+exports.bootstrap = bootstrap;
 
 
 function jquery(done) {
@@ -46,7 +46,7 @@ function jquery(done) {
         pipe(gulp.dest("dist/ExtLib/jquery/dist"));
     done();
 }
-exports.jquery=jquery;
+exports.jquery = jquery;
 
 
 function injectIndex(done) {
@@ -60,21 +60,21 @@ function injectIndex(done) {
         .pipe(gulp.dest("dist"));
     done();
 }
-exports.injectIndex=injectIndex;
+exports.injectIndex = injectIndex;
 
 
 function injectHTMLs(done) {
 
-    var js=gulp.src("/dist/Scripts/**/*.js");
-    
+    var js = gulp.src("/dist/Scripts/**/*.js");
+
     gulp.src("src/Scripts/**/*.html")
-      .pipe(inject(js, {relative: false}))
-      .pipe(gulp.dest("dist/Scripts"));
+        .pipe(inject(js, { relative: false }))
+        .pipe(gulp.dest("dist/Scripts"));
     done();
 }
-exports.injectHTMLs=injectHTMLs;
+exports.injectHTMLs = injectHTMLs;
 
 
-exports.series = gulp.series(bootstrap, jquery, less, ts);
+exports.series = gulp.series(bootstrap, jquery, lessCSS, ts);
 
 exports.parallel = gulp.parallel(injectHTMLs, injectIndex)
