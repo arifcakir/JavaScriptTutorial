@@ -8,10 +8,10 @@ var less = require('gulp-less');
 var inject = require('gulp-inject');
 
 
-//farklı ts  moduller için bundan biekaçtane hazırlanabilir
+//farklı ts  moduller için bundan birkaç tane hazırlanabilir
 function ts(done) {
 
-    tsProject.src()
+    tsProject.src("src/Scripts/**/*.ts")
         .pipe(tsProject())
         .js.pipe(gulp.dest("dist/Scripts"));
 
@@ -49,32 +49,31 @@ function jquery(done) {
 exports.jquery = jquery;
 
 
-function injectIndex(done) {
+function injectMain(done) {
 
     var css = gulp.src("dist/ExtLib/bootstrap/css/bootstrap.min.css");
-    var js = gulp.src("dist/ExtLib/jquery/dist/jquery.min.js");
+    var js = gulp.src(["dist/ExtLib/jquery/dist/jquery.min.js", "dist/Scripts/Main.js"]);
 
-    gulp.src("src/index.html")
+    gulp.src("src/main.html")
         .pipe(inject(css, { relative: false }))
         .pipe(inject(js, { relative: false }))
         .pipe(gulp.dest("dist"));
     done();
 }
-exports.injectIndex = injectIndex;
+exports.injectMain = injectMain;
 
 
-function injectHTMLs(done) {
+function injectDeclaration(done) {
 
-    var js = gulp.src("/dist/Scripts/**/*.js");
+    var js = gulp.src("/dist/Scripts/Declaration/Declaration.js");
 
-    gulp.src("src/Scripts/**/*.html")
+    gulp.src("src/Scripts/Declaration/Declaration.html")
         .pipe(inject(js, { relative: false }))
-        .pipe(gulp.dest("dist/Scripts"));
+        .pipe(gulp.dest("dist/Scripts/Declaration"));
     done();
 }
-exports.injectHTMLs = injectHTMLs;
-
+exports.injectDeclaration = injectDeclaration;
 
 exports.series = gulp.series(bootstrap, jquery, lessCSS, ts);
 
-exports.parallel = gulp.parallel(injectHTMLs, injectIndex)
+exports.parallel = gulp.parallel(injectDeclaration, injectMain)
